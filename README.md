@@ -4,21 +4,16 @@ This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
+* Git Repository
+https://github.com/hiroakishibata1909/rails-test-app
 
-* Ruby version
+* Domain
+https://3c2586835f7b448bb5a356c315e999ed.vfs.cloud9.ap-northeast-1.amazonaws.com/home/index
 
-* System dependencies
+* 
 
-* Configuration
+## work memo
 
-* Database creation
+https://shinodogg.com/?p=3341
+rails destroyについて
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
