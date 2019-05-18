@@ -1,2 +1,11 @@
 <h1>ホーム</h1>
 <%= link_to 'ユーザ登録', '/users/new' %>
+<br>
+
+<% if @login_user.nil? %>
+    <p>ログインしていません</p>
+<% end %>
+
+<br>
+<%= 'hoge' %>
+<%= 'fuga' %>
