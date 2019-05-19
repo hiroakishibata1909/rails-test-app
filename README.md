@@ -31,3 +31,6 @@ https://qiita.com/Momozono/items/319bc503e6a5f0963ab9
 
 * RailsのMVCモデル
 https://www.javadrive.jp/rails/ini/index7.html
+
+* 別アカウントのiamユーザと共同編集する方法
+https://docs.aws.amazon.com/ja_jp/cloud9/latest/user-guide/share-environment.html#share-environment-invite-user-cross-account
