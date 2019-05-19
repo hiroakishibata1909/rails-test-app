@@ -4,8 +4,6 @@
 
 <% if @login_user.nil? %>
     <p>ログインしていません</p>
+<% else %>
+    <%= @login_user.name + 'でログインしています' %>
 <% end %>
-
-<br>
-<%= 'hoge' %>
-<%= 'fuga' %>
