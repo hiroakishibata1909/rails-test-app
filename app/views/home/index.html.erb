@@ -6,4 +6,8 @@
     <p>ログインしていません</p>
 <% else %>
     <%= @login_user.name + 'でログインしています' %>
+    </br>
+    <%= link_to '新規投稿画面', new_post_path %>
 <% end %>
+
+
