@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   end
   
   def create
-
     @login_user = nil
     unless cookies[:user_id].nil?
       @login_user = User.find_by(id: cookies[:user_id])

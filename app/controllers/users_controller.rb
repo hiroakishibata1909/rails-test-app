@@ -21,4 +21,8 @@ class UsersController < ApplicationController
     
     redirect_to '/'
   end
+  
+  def logout
+    cookies.delete(:user_id)
+  end
 end

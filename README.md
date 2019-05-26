@@ -7,10 +7,6 @@ Things you may want to cover:
 * Git Repository
 https://github.com/hiroakishibata1909/rails-test-app
 
-* Application URL
-https://3c2586835f7b448bb5a356c315e999ed.vfs.cloud9.ap-northeast-1.amazonaws.com
-
-* 
 
 ## shibata work memo
 
