@@ -36,3 +36,6 @@ https://docs.aws.amazon.com/ja_jp/cloud9/latest/user-guide/share-environment.htm
 
 * new, createアクションの違いと、URL入力からhtml出力の流れ
 http://igarashikuniaki.net/rails_textbook/new-create.html
+
+* railsでデータベースの中身を調べる
+$ rails dbconsole
