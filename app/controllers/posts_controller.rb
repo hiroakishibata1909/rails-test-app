@@ -1,14 +1,11 @@
 class PostsController < ApplicationController
+  before_action :get_login_user
+  
   def new
     @post = Post.new
   end
   
   def create
-    @login_user = nil
-    unless cookies[:user_id].nil?
-      @login_user = User.find_by(id: cookies[:user_id])
-    end
-    
     if @login_user.nil?
       redirect_to '/'
       return
