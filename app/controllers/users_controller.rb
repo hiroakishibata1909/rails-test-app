@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :get_login_user, only: [:index]
+  
+  def index
+    @users = User.where.not(id: @login_user.id)
+  end
+  
   def new
     # モデルオブジェクトを生成する
     # https://railsguides.jp/getting_started.htmlの

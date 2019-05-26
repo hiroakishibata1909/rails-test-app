@@ -11,6 +11,9 @@
     <%= link_to 'ログアウト', '/users/logout' %></br>
     <%= link_to '新規投稿画面', new_post_path %>
 <% end %>
+</br>
+
+<%= link_to 'ユーザ一覧', 'users' %></br>
 
 <% @posts.each do |post| %>
     <p>
