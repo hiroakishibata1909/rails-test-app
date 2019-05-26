@@ -25,4 +25,26 @@ class UsersController < ApplicationController
   def logout
     cookies.delete(:user_id)
   end
+  
+  def login
+    @user = User.new
+  end
+  
+  def send_login
+    @user = User.find_by(
+        name: params[:user][:name],
+        password: params[:user][:password]
+      )
+    if @user.nil?
+      redirect_to 'users/login'
+      return
+    end
+    
+    cookies[:user_id] = {
+      :value => @user.id,
+      :expire => 1.year.from_now
+    }
+    
+    redirect_to '/'
+  end
 end

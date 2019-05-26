@@ -1,14 +1,14 @@
 <h1>ホーム</h1>
-<%= link_to 'ユーザ登録', '/users/new' %>
+
 <br>
 
 <% if @login_user.nil? %>
     <p>ログインしていません</p>
+    <%= link_to 'ユーザ登録', '/users/new' %></br>
+    <%= link_to 'ログイン', 'users/login' %>
 <% else %>
-    <%= @login_user.name + 'でログインしています' %>
-    </br>
-    <%= link_to 'ログアウト', '/users/logout%>
-    </br>
+    <%= @login_user.name + 'でログインしています' %></br>
+    <%= link_to 'ログアウト', '/users/logout' %></br>
     <%= link_to '新規投稿画面', new_post_path %>
 <% end %>
 
