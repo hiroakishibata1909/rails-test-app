@@ -40,3 +40,6 @@ http://igarashikuniaki.net/rails_textbook/new-create.html
 * railsでデータベースの中身を調べる
 https://qiita.com/kouuuki/items/b6e1a4318d8feee24c9f
 $ rails dbconsole
+
+test
+
