@@ -5,6 +5,8 @@ class HomeController < ApplicationController
     @posts = []
     unless @login_user.nil?
       @posts = Post.where(user_id: @login_user.id)
+      puts "@login_user.id : #{@login_user.id}"
     end
+    puts @login_user
   end
 end
