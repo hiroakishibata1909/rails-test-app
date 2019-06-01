@@ -1,11 +1,11 @@
 <h1>ログイン</h1>
 
-<%= form_for @user, {:action => 'send_login'} do |f| %>
-    <%= f.label:name %>
-    <%= f.text_field:name %>
+<%= form_for @user, :url => {:action => 'send_login'} do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
     </br>
-    <%= f.label:password %>
-    <%= f.text_field:password %>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
     </br>
     <%= f.submit 'ログイン' %>
 <% end %>
