@@ -16,7 +16,6 @@
 <%= link_to 'ユーザ一覧', 'users' %></br>
 
 <% @posts.each do |post| %>
-    <p>
-        <%= post.content %>
-    </p>
+    <h5><%= post.user.name %></h5>
+    <p><%= post.content %></p>
 <% end %>

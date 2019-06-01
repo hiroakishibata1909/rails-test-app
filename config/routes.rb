@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'follows/create'
+
   root to: 'home#index'
   get 'home/index'
   
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   post 'users/send_login'
   resources :users
   
-
+  resources :follows
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

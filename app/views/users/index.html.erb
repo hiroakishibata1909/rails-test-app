@@ -3,10 +3,12 @@
 <% @users.each do |user| %>
     <p><%= user.name %></p>
     
-    <% follow = Follow.find_by(user_id: @login_user.id, following_user_id:user.id) %>
+    <% follow = Follow.find_by(user_id: @login_user.id, following_user_id: user.id) %>
     <% if follow.nil? %>
-        <p>フォローしていません</p>  
+        <%= button_to 'follow', controller: 'follows', params: { user_id: @login_user.id, following_user_id: user.id} %>
     <% else %>
-        <p>フォローしています</p> 
+        <%= button_to 'unfollow', follow_path(follow.id), method: :delete %>
     <% end %>
+    </br>
+    <%= link_to 'ホーム画面に戻る', '/' %>
 <% end %>
