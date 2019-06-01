@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :get_login_user, only: [:index]
+  
+  def index
+    @users = User.where.not(id: @login_user.id)
+  end
+  
   def new
     # モデルオブジェクトを生成する
     # https://railsguides.jp/getting_started.htmlの
@@ -7,15 +13,15 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new
-    @user.name = params[:user][:name]
-    @user.password = params[:user][:password]
+    user = User.new
+    user.name = params[:user][:name]
+    user.password = params[:user][:password]
     # ユーザーをデータベースに保存する
-    @user.save
+    user.save
     
     # ログインしたユーザのidを保存する（idは自動付与される）
     cookies[:user_id] = {
-      :value => @user.id,
+      :value => user.id,
       :expire => 1.year.from_now
     }
     
